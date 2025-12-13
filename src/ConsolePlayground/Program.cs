@@ -47,3 +47,89 @@ Console.WriteLine($"   Origin + UnitX*2 = {complexExpression}");
 Console.WriteLine("\n=== Demo Complete ===");
 
 //-------------------- Extension Members End --------------------
+
+
+//-------------------- Null Conditional Assignment Start --------------------
+
+Console.WriteLine("=== C# 14 Null Conditional Assignment Demo ===\n");
+
+// Scenario 1: Person with an address
+var personWithAddress = new Person
+{
+    Name = "Alice",
+    Address = new Address { Street = "123 Main St", City = "Portland" }
+};
+
+Console.WriteLine("Before update:");
+Console.WriteLine($"  {personWithAddress.Name}'s city: {personWithAddress.Address?.City}");
+
+// Using null-conditional assignment
+personWithAddress?.Address?.City = "Seattle";
+
+Console.WriteLine("After update:");
+Console.WriteLine($"  {personWithAddress.Name}'s city: {personWithAddress.Address?.City}");
+
+// Scenario 2: Person without an address
+var personWithoutAddress = new Person { Name = "Bob" };
+
+Console.WriteLine($"\n{personWithoutAddress.Name} has no address.");
+Console.WriteLine("Attempting to set city using null-conditional assignment...");
+
+// This safely does nothing because Address is null
+personWithoutAddress?.Address?.City = "New York";
+
+Console.WriteLine($"  City after attempted assignment: {personWithoutAddress.Address?.City ?? "(no address)"}");
+
+// Scenario 3: Null person reference
+Person? nullPerson = null;
+
+Console.WriteLine("\nAttempting to set city on a null person reference...");
+
+// This safely does nothing because nullPerson is null
+nullPerson?.Address?.City = "Chicago";
+
+Console.WriteLine("  No exception thrown! Assignment was safely skipped.");
+
+Console.WriteLine("\n=== Demo Complete ===");
+
+//-------------------- Null Conditional Assignment End --------------------
+
+//-------------------- Field Keyword Start --------------------
+
+Console.WriteLine("=== C# 14 Field Keyword Demo ===\n");
+
+var productItem = new Product();
+
+// Test Name with trimming
+Console.WriteLine("1. Setting product name with extra whitespace:");
+productItem.Name = "   Wireless Headphones   ";
+Console.WriteLine($"   Stored name: \"{productItem.Name}\"");
+
+// Test Price validation
+Console.WriteLine("\n2. Setting valid price:");
+productItem.Price = 99.99m;
+Console.WriteLine($"   Price: {productItem.Price:C}");
+
+Console.WriteLine("\n3. Attempting to set negative price:");
+try
+{
+    productItem.Price = -10m;
+}
+catch (ArgumentOutOfRangeException ex)
+{
+    Console.WriteLine($"   Caught exception: {ex.Message}");
+}
+
+// Test lazy slug generation
+Console.WriteLine("\n4. Accessing slug (lazy initialization):");
+Console.WriteLine($"   Slug: {productItem.Slug}");
+
+// Test stock quantity with change tracking
+Console.WriteLine("\n5. Updating stock quantity:");
+productItem.StockQuantity = 100;
+productItem.StockQuantity = 95;
+productItem.StockQuantity = 95;  // No change, no message
+
+Console.WriteLine("\n=== Demo Complete ===");
+
+//-------------------- Field Keyword End --------------------
