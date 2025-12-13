@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SingleFileAppConverted", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeyThere", "src\SingleFileAppConverted\HeyThere.csproj", "{9A55BE52-26CF-4E4E-AE89-33F0D4A54237}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMostMinimalisticApiOnEarth", "src\TheMostMinimalisticApiOnEarth\TheMostMinimalisticApiOnEarth.csproj", "{FF3CBBA5-0757-47DD-8B2C-26063AB28183}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,18 @@ Global
 		{9A55BE52-26CF-4E4E-AE89-33F0D4A54237}.Release|x64.Build.0 = Release|Any CPU
 		{9A55BE52-26CF-4E4E-AE89-33F0D4A54237}.Release|x86.ActiveCfg = Release|Any CPU
 		{9A55BE52-26CF-4E4E-AE89-33F0D4A54237}.Release|x86.Build.0 = Release|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Debug|x64.Build.0 = Debug|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Debug|x86.Build.0 = Debug|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Release|x64.ActiveCfg = Release|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Release|x64.Build.0 = Release|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Release|x86.ActiveCfg = Release|Any CPU
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,5 +97,6 @@ Global
 		{12AF99C0-A4D0-4791-BC6E-1DF41A5AE838} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{0648A584-2FD9-33BA-8483-89E0A2804CB2} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{9A55BE52-26CF-4E4E-AE89-33F0D4A54237} = {0648A584-2FD9-33BA-8483-89E0A2804CB2}
+		{FF3CBBA5-0757-47DD-8B2C-26063AB28183} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
